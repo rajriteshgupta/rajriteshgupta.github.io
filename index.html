@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ritesh Raj Portfolio</title>
+    <title>Ritesh Raj</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -48,12 +48,31 @@
   /* background-color: #cde1f8; */
   margin: .5rem 0 1.2rem 0;
   border-radius: 0;
-  height: .7rem;
+  height: .5rem;
 }
 
 .skill-mf .progress .progress-bar {
   height: .7rem;
+	margin-top: -.1rem;
   background-color: #ffbd39;
+}
+.progress-bar .animate {
+	animation-name: fillProgress;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+}
+ 
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.width-150 {
+	width: 150px !important;
 }
 
 
@@ -188,7 +207,7 @@
 						<br>
 						<br>
 			      <!-- <h2>A Senior Data Analyst</h2> -->
-						<h2 style="margin-bottom: 0">With over 3 years of experience</h2>
+						<h2 style="margin-bottom: 0">With <span class="total-expr"></span> years of experience</h2>
 						<br>
 			            <p><a href="#resume-section" class="btn btn-primary py-3 px-4">My Resume</a></p>
 		            </div>
@@ -212,7 +231,7 @@
 								<div class="row">
 									<div class=" col-6 col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/about.png" class="img-fluid rounded-circle img-thumbnail b-shadow-a" alt="">
+										<img src="images/about.jpg" class="img-fluid rounded-circle img-thumbnail b-shadow-a" alt="">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
@@ -221,22 +240,6 @@
 										<p><span class="title-s">Name: </span> <span>Ritesh Raj</span></p>
 										<p><span class="title-s">Job Role: </span> <span>Frontend Developer</span></p>
 										<p><span class="title-s">Experience: </span> <span id="total-exp"></span></p>
-										<script>
-											var startDate = new Date("07/01/2021"); // Date --> MM/DD/YYYY
-											var today = new Date();
-											var years = today.getFullYear() - startDate.getFullYear();
-											var months = today.getMonth() - startDate.getMonth();
-											if(months < 0){
-												months += 12;
-												years--;
-											}
-											if(months === 0){
-												document.getElementById('total-exp').innerHTML = years + " Years";
-											}
-											else{
-												document.getElementById('total-exp').innerHTML = years + " Years " + months + " Months";
-											}
-										</script>
 										<p><span class="title-s">Address: </span> <span>Delhi, India</span></p>
 									  </div>
 									</div>
@@ -244,34 +247,29 @@
 
 								<div class="skill-mf">
 									<h3 class="heading">Skills</h3>
-									<span>Angular</span> <span class="pull-right">95%</span>
+									<span>Angular</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
+										<div class="progress-bar"></div>
 									</div>
 									
-									<span>React</span> <span class="pull-right">90%</span>
+									<span>React</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
+										<div class="progress-bar"></div>
 									</div>
 									
-									<span>Redux</span> <span class="pull-right">90%</span>
+									<span>Redux</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
+										<div class="progress-bar"></div>
 									</div>
 									
-									<span>NgRx</span> <span class="pull-right">90%</span>
+									<span>NgRx</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
+										<div class="progress-bar"></div>
 									</div>
 									
-									<span>RxJs</span> <span class="pull-right">85%</span>
+									<span>RxJs</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
+										<div class="progress-bar"></div>
 									</div>
 								</div>
 							</div>
@@ -285,17 +283,18 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>With over 3 years of comprehensive experience in the field of web development, accompanied by B.Tech in Information Technology. 
+								<p>With <span class="total-expr"></span> years of comprehensive experience in the field of web development, accompanied by B.Tech in Information Technology. 
 									Proficient in Angular and React. Developed responsive web applications; optimized performance by 45%, resulting in a 25% increase 
 									in user engagement and satisfaction.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Angular and React Developer</span></li>
-									<li class="d-flex"><span>Education:</span> <span>B.Tech in Information Technology</span></li>
-									<li class="d-flex"><span>Languages:</span> <span>HTML5, CSS3, JavaScript (ES6+) &amp; TypeScript</span></li>
-									<li class="d-flex"><span>Styling:</span> <span>Tailwind CSS, SASS, LESS, Material-UI &amp; Bootstrap</span></li>
-									<li class="d-flex"><span>Tools/CI/CD:</span> <span>Webpack, Vite, Git, GitHub, Jenkins, Jira &amp; npm</span></li>
-									<li class="d-flex"><span>Familiar with:</span> <span>Express.js, Next.js, MongoDB, Prisma ORM &amp; Mongoose ODM</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Chess, Travel Photography</span></li>
+									<li class="d-flex"><span class="width-150">Profile:</span> <span>Angular and React Developer</span></li>
+									<li class="d-flex"><span class="width-150">Education:</span> <span>B.Tech in Information Technology</span></li>
+									<li class="d-flex"><span class="width-150">Languages:</span> <span>HTML5, CSS3, JavaScript (ES6+), TypeScript, C/C++, Java, SQL</span></li>
+									<li class="d-flex"><span class="width-150">Web & Tools:</span> <span>Angular, React.js, Redux, NgRx, RxJs, Bootstrap, Express.js, Next.js, MongoDB, Prisma ORM,
+Mongoose ODM, Tailwind CSS, Material-UI</span></li>
+									<li class="d-flex"><span class="width-150">CI/CD & Tools:</span> <span>Webpack, Vite, Git, GitHub, Jenkins, Jira, npm, VS Code, Prettier</span></li>
+									<li class="d-flex"><span class="width-150"> CS Fundamentals:</span> <span>DSA, Computer Networks, OOPs, OS, DBMS</span></li>
+									<li class="d-flex"><span class="width-150">Interest:</span> <span>Chess, Travelling, Photography</span></li>
 								</ul>
 							</div>
 						</div>
@@ -325,7 +324,7 @@
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-            <p>Dynamic and results-oriented Frontend Developer with more than 3 years of experience in developing and maintaining web applications using Angular and React. Proficient in crafting responsive and user-centric interfaces, leveraging modern JavaScript frameworks and libraries. Strong problem-solving skills, attention to detail, and a collaborative mindset, ensuring seamless integration and optimization of frontend solutions. Proven ability to deliver high-quality, scalable, and maintainable code in fast-paced, agile environments.</p>
+            <p>Dynamic and results-oriented Frontend Developer with <span class="total-expr"></span> years of experience in developing and maintaining web applications using Angular and React. Proficient in crafting responsive and user-centric interfaces, leveraging modern JavaScript frameworks and libraries. Strong problem-solving skills, attention to detail, and a collaborative mindset, ensuring seamless integration and optimization of frontend solutions. Proven ability to deliver high-quality, scalable, and maintainable code in fast-paced, agile environments.</p>
           </div>
         </div>
 
@@ -348,7 +347,7 @@
 						<li><b>Collaborated with cross-functional teams</b> to deliver high-quality products, leading to a 30% decrease in bug reports and a 20% increase in user retention.</li>
 						<li>Designed modular, reusable front-end components, <b>integrated Rest API and improved web application speed by 35%</b>, leading to a seamless user experience.</li>
 						<li>Led code reviews and <b>5+ junior developers</b>; improved code quality by 40% and accelerated feature delivery by 25% through targeted feedback and best practices.</li>
-						<li>Achievement: Received the Best Performance Band for <b>3 consecutive years (2022 - 2024)</b> due to strong performance and organizational impact.</li>
+						<li>Achievement: Received the Best Performance Band for <b>4 consecutive years (2022, 2023, 2024, 2025)</b> due to strong performance and organizational impact.</li>
 						<li>Tech Stack: <b>Angular, React.Js, Redux, NgRx, RxJs, Git, Jenkins, Webpack</b> etc.</li>
 					</ul>
 				</p>
@@ -376,7 +375,7 @@
 
 			<div class="row justify-content-center mt-5">
 				<div class="col-md-6 text-center ftco-animate">
-					<p><a href="https://drive.google.com/file/d/1sC-15nFKC9t7_CGiwJzvdMcPFVnKEWmO/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-4 px-5">Download CV</a></p>
+					<p><a href="https://drive.google.com/file/d/1Lrq3x-mJUy857s_w_Uh_EBbm9tBtTPM4/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-4 px-5">Download CV</a></p>
 				</div>
 			</div>
     	</div>
@@ -401,8 +400,11 @@
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading">
 									<a href="https://github.com/rajriteshgupta/BlogApp" target="_blank" rel="noopener noreferrer">Blog App</a>
-									<a href="https://ritesh-blogapp.onrender.com" target="_blank" rel="noopener noreferrer"><span class="float-right mr-3 mt-1 icon-paper-plane"></span></a>
 								</h3>
+								<h4>
+									<a href="https://ritesh-blogapp.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-1 px-2 mr-2">View App</a>
+									<a href="https://github.com/rajriteshgupta/BlogApp" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-1 px-2">Source Code</a>
+								</h4>
                 <p>A full-stack blog application with features such as user authentication, post creation, editing, and deletion, and comment functionality. Engineered a responsive UI for the application, ensuring seamless performance across devices.</p>
               </div>
             </div>
@@ -414,8 +416,11 @@
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading">
 									<a href="https://github.com/rajriteshgupta/ecommerce-admin" target="_blank" rel="noopener noreferrer">E-commerce Admin</a>
-									<a href="https://ritesh-ecommerce-admin.vercel.app" target="_blank" rel="noopener noreferrer"><span class="float-right mr-3 mt-1 icon-paper-plane"></span></a>
 								</h3>
+								<h4>
+									<a href="https://ritesh-ecommerce-admin.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-1 px-2 mr-2">View App</a>
+									<a href="https://github.com/rajriteshgupta/ecommerce-admin" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-1 px-2">Source Code</a>
+								</h4>
                 <p>E-commerce admin application provides functionality to create multiple stores, billboards, categories etc. Developed and implemented a responsive UI design, optimizing application performance across various devices.</p>
               </div>
             </div>
@@ -427,8 +432,11 @@
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading">
 									<a href="https://github.com/rajriteshgupta/ecommerce-store" target="_blank" rel="noopener noreferrer">E-commerce Store</a>
-									<a href="https://ritesh-ecommerce-store.vercel.app" target="_blank" rel="noopener noreferrer"><span class="float-right mr-3 mt-1 icon-paper-plane"></span></a>
 								</h3>
+								<h4>
+									<a href="https://ritesh-ecommerce-store.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-1 px-2 mr-2">View App</a>
+									<a href="https://github.com/rajriteshgupta/ecommerce-store" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-1 px-2">Source Code</a>
+								</h4>
                 <p>E-commerce store application provides functionality to add products to cart and place orders.</p>
               </div>
             </div>
@@ -445,8 +453,11 @@
   
 				  <h3 class="heading">
 						<a href="https://github.com/rajriteshgupta/Techton.ai" target="_blank" rel="noopener noreferrer">Techton AI</a>
-						<a href="https://techton-ai.vercel.app" target="_blank" rel="noopener noreferrer"><span class="float-right mr-3 mt-1 icon-paper-plane"></span></a>
 					</h3>
+					<h4>
+						<a href="https://techton-ai.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-1 px-2 mr-2">View App</a>
+						<a href="https://github.com/rajriteshgupta/Techton.ai" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-1 px-2">Source Code</a>
+					</h4>
 				  <p>An advanced AI-driven chatbot developed to provide comprehensive responses to user questions. The chatbot is capable of generating high-quality images, audio clips, short videos and code snippets based on user inputs.</p>
 				</div>
 			  </div>
@@ -554,7 +565,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1sC-15nFKC9t7_CGiwJzvdMcPFVnKEWmO/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume Link</a></p>
+	            <p><a href="https://drive.google.com/file/d/1Lrq3x-mJUy857s_w_Uh_EBbm9tBtTPM4/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Resume Link</a></p>
 	          </div>
           </div>
 
@@ -570,9 +581,9 @@
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 					  <li class="ftco-animate normal-txt">Find me on  </li>
 					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rajriteshgupta" target="_blank" rel="noopener noreferrer"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-				    <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+					  <li class="ftco-animate"><a href="https://github.com/rajriteshgupta"><span class="icon-github"></span></a></li>
+					  <!-- <li class="ftco-animate"><a href="#"><span class="icon-globe"></span></a></li> -->
+				    <!-- <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> -->
 					</ul>
 				<br>
 		   </div>
@@ -614,6 +625,53 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+	<script>
+		// Total experience in each place
+		var startDate = new Date("07/01/2021"); // Date --> MM/DD/YYYY
+		var today = new Date();
+		var years = today.getFullYear() - startDate.getFullYear();
+		var months = today.getMonth() - startDate.getMonth();
+		if(months < 0){
+			months += 12;
+			years--;
+		}
+		if(months === 0){
+			document.getElementById('total-exp').innerHTML = years + " Years";
+		}
+		else{
+			document.getElementById('total-exp').innerHTML = years + " Years " + months + " Months";
+		}
+		var elements = document.getElementsByClassName('total-expr');
+		if(months > 9){
+			for(let i=0;i<elements.length;i++){
+				elements[i].innerHTML = years+1;
+			}
+		}
+		else{
+			for(let i=0;i<elements.length;i++){
+				elements[i].innerHTML = "over " + years;
+			}
+		}
+	</script>
+	<script>
+		// Progress bar
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const bar = entry.target;
+					bar.style.animation = `fillProgress 1.3s linear forwards`;
+					observer.unobserve(bar);
+				}
+			});
+		},{
+			threshold: 0.6,
+			rootMargin: '0px 0px -5% 0px'
+		});
+		
+		document.querySelectorAll('.progress-bar').forEach(bar => {
+			observer.observe(bar);
+		});
+	</script>
     
   </body>
 </html>
